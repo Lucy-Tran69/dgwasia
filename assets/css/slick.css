@@ -154,19 +154,19 @@
 
 .slide .slide__content {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 40%;
+  left: 38%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
 .slide .slide__content--headings {
-  text-align: center;
   color: #fff;
 }
 
 .slide .slide__content--headings h2 {
-  font-size: 4.5rem;
+  font-size: 64px;
+  text-shadow: 0 0 10px grey;
   margin: 10px 0;
 }
 
@@ -256,7 +256,7 @@
 }
 
 .stick-dots .slick-dots li {
-  height: 5px;
+  height: 3px;
   width: 350px;
 }
 
@@ -265,7 +265,7 @@
   background-color: white;
   opacity: 0.25;
   width: 350px;
-  height: 5px;
+  height: 3px;
   padding: 0;
 }
 

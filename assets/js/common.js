@@ -94,27 +94,83 @@ $(function () {
     dots: true,
   }).slickAnimation();
 
-  // grab all panel classes
   const panels = document.querySelectorAll(".panel");
 
-  // loop through the node list
   panels.forEach((panel) => {
-  // listen for a click
   panel.addEventListener("click", () => {
     removeActive();
-    // if clicked -> add a class of active (so also flex = 5)
     panel.classList.add("active");
   });
   });
 
-  // function to remove active class from elements
   function removeActive() {
-  // loop through panels
   panels.forEach((panel) => {
-    // remove active classes from panel objects
     panel.classList.remove("active");
   });
   }
+  
+  const sections = document.querySelectorAll("section[id]");
+  console.log(sections)
+  window.addEventListener("click", navHighlighter);
+
+  function navHighlighter() {
+    
+    let scrollY = window.pageYOffset;
+    
+    sections.forEach(current => {
+      const sectionHeight = current.offsetHeight;
+      const sectionTop = current.offsetTop - 50;
+      // sectionId = current.getAttribute("id");
+      
+      if (
+        scrollY > sectionTop &&
+        scrollY <= sectionTop + sectionHeight
+      ){
+        document.querySelector(".side-bar-menu-wrapper .side-bar-menu .side-bar-menu-item").classList.add("active");
+      } else {
+        document.querySelector(".side-bar-menu-wrapper .side-bar-menu .side-bar-menu-item.active").classList.remove("active");
+      }
+    });
+  }
+
+  $(window).scroll(function() {
+		var scrollDistance = $(window).scrollTop() + 250;
+		$('.component-section').each(function(i) {
+				if ($(this).position().top <= scrollDistance) {
+						$('.side-bar-menu-wrapper .side-bar-menu .side-bar-menu-item.active').removeClass('active');
+						$('.side-bar-menu-wrapper .side-bar-menu .side-bar-menu-item').eq(i).addClass('active');
+				}
+		});
+}).scroll();
+
+
+// var i = document.querySelectorAll(".component-section"),
+// t = document.querySelector(".side-bar-menu");
+// if(t) {
+// for(var e = new IntersectionObserver(function(n) {
+//   n.forEach(function(n) {
+//     var i, r;
+//     !n.isIntersecting  n.intersectionRatio <= .5  (r = t.querySelector(".side-bar-menu-item.active"), r && r.classList.remove("active"), null === (i = t.querySelector(".side-bar-menu-item[data-title='".concat(n.target.dataset.title, "']")))  void 0 === i  i.classList.add("active"), n.target.dataset.whiteSection ? t.classList.add("white-mode") : t.classList.remove("white-mode"))
+//   })
+// }, {
+//   root: null,
+//   rootMargin: "0px",
+//   threshold: [.5, .75]
+// }), f = "", n = 0; n < i.length; n++) e.observe(i[n]), f += '\n        <li \n            class="side-bar-menu-item '.concat(!n && "active", '"\n            data-section="').concat(i[n].id, '"\n            data-title="').concat(i[n].dataset.title, '">\n            <a href="#').concat(i[n].id, '">').concat(String(n + 1).padStart(2, "0"), "<\/a>\n        <\/li>");
+// t.insertAdjacentHTML("afterbegin", f);
+// for(var r = t.querySelectorAll(".side-bar-menu-item"), o = function(n) {
+//   var t;
+//   null === (t = r[n].querySelector("a"))  void 0 === t  t.addEventListener("click", function(t) {
+//     t.preventDefault();
+//     var i = document.querySelector("#" + r[n].dataset.section);
+//     i && window.scrollTo({
+//       top: i.offsetTop,
+//       behavior: "smooth"
+//     })
+//   })
+// }, u = 0; u < r.length; u++) o(u)
+// }
+
 });
 
 function getHeight(parent, classname, column) {
