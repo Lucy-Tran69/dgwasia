@@ -221,6 +221,48 @@ worker.forEach( counter => {
   animate();
 })
 
+$('.language-content').slick({
+  dots: false,
+  arrows: false,
+  infinite: true,
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 0,
+  speed: 8000,
+  cssEase: 'cubic-bezier(0.42,0,1,1)',
+  responsive: [
+    {
+      breakpoint: 1320,
+      settings: {
+        slidesToShow: 4,
+        speed: 12000,
+        slidesToScroll: 4
+      }
+    },
+    {
+      breakpoint: 1080,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3
+      }
+    },
+    {
+      breakpoint: 680,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+    }
+  }]
+});
+
 // var i = document.querySelectorAll(".component-section"),
 // t = document.querySelector(".side-bar-menu");
 // if(t) {
