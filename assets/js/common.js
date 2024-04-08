@@ -109,6 +109,7 @@ $(function () {
   });
   }
   
+  //menu click
   const sections = document.querySelectorAll("section[id]");
   console.log(sections)
   window.addEventListener("click", navHighlighter);
@@ -133,6 +134,7 @@ $(function () {
     });
   }
 
+  //menu scroll
   $(window).scroll(function() {
 		var scrollDistance = $(window).scrollTop() + 250;
 		$('.component-section').each(function(i) {
@@ -143,6 +145,81 @@ $(function () {
 		});
 }).scroll();
 
+//quantity
+const client = document.querySelectorAll('.value-clients');
+const project = document.querySelectorAll('.value-projects');
+const hour = document.querySelectorAll('.value-hours');
+const worker = document.querySelectorAll('.value-workers');
+const speed = 200;
+
+client.forEach( counter => {
+   const animate = () => {
+      const value = +counter.getAttribute('clients');
+      const data = +counter.innerText;
+     
+      const time = value / speed;
+     if(data < value) {
+          counter.innerText = Math.ceil(data + time);
+          setTimeout(animate, 1);
+        }else{
+          counter.innerText = value;
+        }
+     
+   }
+   
+   animate();
+});
+project.forEach( counter => {
+  const animate = () => {
+     const value = +counter.getAttribute('projects');
+     const data = +counter.innerText;
+    
+     const time = value / speed;
+    if(data < value) {
+         counter.innerText = Math.ceil(data + time);
+         setTimeout(animate, 1);
+       }else{
+         counter.innerText = value;
+       }
+    
+  }
+  
+  animate();
+})
+hour.forEach( counter => {
+  const animate = () => {
+     const value = +counter.getAttribute('hours');
+     const data = +counter.innerText;
+    
+     const time = value / speed;
+    if(data < value) {
+         counter.innerText = Math.ceil(data + time);
+         setTimeout(animate, 1);
+       }else{
+         counter.innerText = value;
+       }
+    
+  }
+  
+  animate();
+})
+worker.forEach( counter => {
+  const animate = () => {
+     const value = +counter.getAttribute('workers');
+     const data = +counter.innerText;
+    
+     const time = value / speed;
+    if(data < value) {
+         counter.innerText = Math.ceil(data + time);
+         setTimeout(animate, 1);
+       }else{
+         counter.innerText = value;
+       }
+    
+  }
+  
+  animate();
+})
 
 // var i = document.querySelectorAll(".component-section"),
 // t = document.querySelector(".side-bar-menu");

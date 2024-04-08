@@ -17,6 +17,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
     <script src="./assets/js/slick-animation.js"></script>
     <script src="./assets/js/common.js" defer></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="icon" type="image/png" href="./favicon.png" sizes="16x16">
 
     <!-- Google tag (gtag.js) -->
@@ -34,15 +36,6 @@
 <body class="hp-page">
     <header class="header-nav">
         <h1 class="logo"><a href="/"><img src="./assets/img/logo.svg" alt="DGWA DGW ASIA Co., Ltd"></a></h1>
-        <ul class="nav">
-            <li><a href="/#digital">幅広いデジタル領域に対応</a></li>
-            <li><a href="/#select">選べる最適な体制</a></li>
-            <li><a href="/#production">制作について</a></li>
-            <li><a href="/#development">開発について</a></li>
-            <li><a href="/#test">テストについて</a></li>
-            <li><a href="/#about">会社概要</a></li>
-
-        </ul>
         <div class="sp-menu only-sp">
             <span></span><span></span><span></span>
         </div>
@@ -50,11 +43,14 @@
 
     <section class="side-bar-menu-wrapper show-only-desktop" id="nav-menu">
       <ul class="side-bar-menu">
-        <li class="side-bar-menu-item active" data-section="banner-slider" data-title="Welcome">
-          <a href="#banner-slider">01</a>
+        <li class="side-bar-menu-item active" data-section="welcome" data-title="Welcome">
+          <a href="#welcome">W</a>
         </li>
-        <li class="side-bar-menu-item false" data-section="introduction-slider" data-title="Our Mission">
-          <a href="#introduction-slider">02</a>
+        <li class="side-bar-menu-item false" data-section="mission" data-title="Our Mission">
+          <a href="#mission">M</a>
+        </li>
+        <li class="side-bar-menu-item false" data-section="our-services" data-title="Our Services">
+          <a href="#services">S</a>
         </li>
         <div class="side-bar-menu-footer">
           <div class="scroll-text">
@@ -69,7 +65,7 @@
       </ul>
     </section>
 
-    <section class="banner-slider page-header component-section" id="banner-slider">
+    <section class="banner-slider page-header component-section" id="welcome">
       <div class="slider stick-dots">
         <div class="slide">
           <div class="slide__img">
@@ -92,10 +88,71 @@
             </div>
           </div>
         </div>
+        <div class="slide">
+          <div class="slide__img">
+            <img src="" alt="" data-lazy="http://alexandrebuffet.fr/codepen/images/full/nature_02.jpg" class="full-image animated" data-animation-in="zoomInImage" />
+          </div>
+          <div class="slide__content">
+            <div class="slide__content--headings">
+              <h2 class="animated" data-animation-in="fadeInUp">DGWA Expands Global Presence <br/> 
+                with New Subsidiary </h2>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-      <section class="desktop-slider component-section" id="introduction-slider">
+    <section class="component-section" id="mission" style="margin-top: 100px; margin-bottom: 100px;">
+      <div class="component-content-mission">
+        <div>
+          <p>クライアントに世界最高のテクノロジーを使い</p>
+          <p>最高のサービスで「ドキドキ」を提供する</p>
+          <p>エンドユーザーに最高品質の「ドキドキ」を提供する</p>
+          <p>社員一同が「グルーヴ」し働きやすい環境で「ドキドキ」を提供する</p>
+        </div>
+       <div style="width: 20%;">
+        <img src="https://images.pexels.com/photos/1174732/pexels-photo-1174732.jpeg"/>
+       </div>
+      </div>
+    </section>
+
+    <section id="quantity">
+      <div style="display: flex;">
+        <div class="bgr-img">
+          <img class="img" src="https://images.pexels.com/photos/1174732/pexels-photo-1174732.jpeg"/>
+        </div>
+        <div class="bgr-opacity"></div>
+        <div class="counter">
+          <div>
+            <span class="plus">
+              <p class="value-clients" clients="232">0</p>+
+            </span>
+            <p class="plus">Clients</p>
+          </div>
+          <div>
+            <span class="plus">
+              <p class="value-projects" projects="521">0</p>+
+            </span>
+            <p class="plus">Projects</p>
+          </div>
+          <div>
+            <span class="plus">
+              <p class="value-hours" hours="1453">0</p>+
+            </span>
+            <p class="plus">Hours of Support</p>
+          </div>
+          <div>
+            <span class="plus">
+              <p class="value-workers" workers="32">0</p>+
+            </span>
+            <p class="plus">Workers</p>
+          </div>
+        </div>
+      </div>
+     
+    </section>
+
+      <section class="desktop-slider component-section" id="services">
         <div class="panel active">
           <img src="https://images.pexels.com/photos/1174732/pexels-photo-1174732.jpeg"/>
           <h3>Automotive</h3>
