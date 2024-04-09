@@ -1681,3 +1681,80 @@ img:hover, :focus {
   color: #0a519f;
   opacity: 1;
 }
+
+.projects-content .slick-carousel {
+  margin: 2rem auto;
+  visibility: hidden;
+  transition: opacity 1s ease;
+  margin-left: 50px;
+  margin-right: 50px;
+
+  &.slick-initialized {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.projects-content .slick-carousel .slick-list .slick-slide {
+  margin: 0 10px;
+}
+
+.projects-content .slick-carousel .slick-list {
+  margin: 0 -10px;
+}
+
+.projects-content .slick-carousel img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.projects-content .slick-carousel .project-item {
+  border: 1px solid #f2f2f2;
+  border-radius: 5px;
+}
+
+.projects-content .slick-carousel .slick-next::before,
+.projects-content .slick-carousel .slick-prev::before {
+  color: #0a519f !important;
+  font-size: 36px !important;
+  font-weight: bold !important;
+}
+
+.projects-content .slick-carousel .slick-prev {
+  left: -45px !important;
+  display: inline-block !important;
+}
+
+.projects-content .slick-carousel .slick-next {
+  right: -32px !important;
+  display: inline-block !important;
+}
+
+.projects-content .slick-carousel .slick-dots {
+  bottom: -25px;
+}
+
+.projects-content .slick-carousel .slick-dots li button:before {
+  font-size: 1rem;
+}
+
+.projects-content .slick-carousel .slick-dots li.slick-active button:before {
+  color: #0a519f;
+  font-size: 1rem;
+}
+
+.pd-10 {
+  padding: 10px;
+}
+
+.project-item-title {
+  font-size: 15px;
+  color: #0a519f;
+}
+
+.project-item-sub-title {
+  font-size: 25px;
+  font-weight: bold;
+}

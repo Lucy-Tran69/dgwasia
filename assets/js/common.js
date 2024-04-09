@@ -111,7 +111,6 @@ $(function () {
   
   //menu click
   const sections = document.querySelectorAll("section[id]");
-  console.log(sections)
   window.addEventListener("click", navHighlighter);
 
   function navHighlighter() {
@@ -229,39 +228,38 @@ $('.language-content').slick({
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 0,
-  speed: 8000,
-  cssEase: 'cubic-bezier(0.42,0,1,1)',
-  responsive: [
-    {
-      breakpoint: 1320,
-      settings: {
-        slidesToShow: 4,
-        speed: 12000,
-        slidesToScroll: 4
-      }
-    },
-    {
-      breakpoint: 1080,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3
-      }
-    },
-    {
-      breakpoint: 680,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-    }
-  }]
+  speed: 6000,
 });
+
+var $slickElement = $('.slick-carousel');
+  var $status = $('.pagingInfo');
+
+  $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+
+    if(!slick.$dots){
+      return;
+    }
+
+    var i = (currentSlide ? currentSlide : 0) + 1;
+
+    $status.text(i + '/' + (slick.$dots[0].children.length));
+
+  });
+
+  $slickElement.slick({
+    infinite: true,
+    centerMode: false,
+    slidesToShow: 4,
+    arrows: true, 
+    dots: true,
+    autoplaySpeed: 1000,
+    autoplay: true,
+    pauseOnHover: true,
+    pauseOnFocus: true,
+    pauseOnDotsHover: true,
+  });
+
+
 
 // var i = document.querySelectorAll(".component-section"),
 // t = document.querySelector(".side-bar-menu");
