@@ -1665,6 +1665,7 @@ img:hover, :focus {
   opacity: .15;
 }
 
+/* language */
 .language-content {
   display: flex;
   justify-content: space-around;
@@ -1682,6 +1683,7 @@ img:hover, :focus {
   opacity: 1;
 }
 
+/* projects */
 .projects-content .slick-carousel {
   margin: 2rem auto;
   visibility: hidden;
@@ -1757,4 +1759,724 @@ img:hover, :focus {
 .project-item-sub-title {
   font-size: 25px;
   font-weight: bold;
+}
+
+/* procedure */
+.procedure-wrapper {
+  margin-left: 5%;
+  margin-right: 7%;
+  margin-bottom: 5%;
+  margin-top: 5%;
+	position:relative;
+}
+
+.bar {
+	width:100%;
+	height: 9px;
+	background:#e6e6e6;
+	position: relative;
+}
+
+.bar:after {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	width: 10%;
+	height: 100%;
+	background: #3f96f3;
+	-webkit-animation: mymove 10s infinite;
+	animation: mymove 10s infinite;
+}
+
+@keyframes mymove {
+	0% {
+		width: 0%;
+	}
+
+	25% {
+		width: 25%;
+	} 
+
+	50% {
+		width:50%;
+	}
+	75% {
+		width: 75%;
+	}
+
+	100% {
+		width: 100%;
+	}
+
+}
+
+@-webkit-keyframes mymove {
+	0% {
+		width: 0%;
+	}
+
+	25% {
+		width: 25%;
+	}
+
+	50% {
+		width: 50%;
+	}
+	75% {
+		width: 75%;
+	}
+
+	100% {
+		width: 100%;
+	}
+
+}
+
+.item {
+  height: 50px;
+  width: 50px;
+  color: #fff;
+  position: absolute;
+  top: -20px;
+  left: 0px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 13px;
+}
+
+.item-1 {
+  left: -1%;
+  -webkit-animation: itemone 10s infinite;
+  animation: itemone 10s infinite;
+}
+
+.item-2 {
+  left: 20%;
+  -webkit-animation: itemtwo 10s infinite;
+  animation: itemtwo 10s infinite;
+}
+
+.item-3 {
+  left: 40%;
+  -webkit-animation: itemthree 10s infinite;
+  animation: itemthree 10s infinite;
+}
+
+.item-4 {
+  left: 60%;
+  -webkit-animation: itemfour 10s infinite;
+  animation: itemfour 10s infinite;
+}
+
+.item-5 {
+  left: 80%;
+  -webkit-animation: itemfive 10s infinite;
+  animation: itemfive 10s infinite;
+}
+.item-6 {
+  left: 100%;
+  -webkit-animation: itemsix 10s infinite;
+  animation: itemsix 10s infinite;
+}
+
+.text-1 {
+  left: -1%;
+  -webkit-animation: itemone 10s infinite;
+  animation: textone 10s infinite;
+}
+
+.text-2 {
+  left: 20%;
+  -webkit-animation: itemtwo 10s infinite;
+  animation: texttwo 10s infinite;
+}
+
+.text-3 {
+  left: 40%;
+  -webkit-animation: itemthree 10s infinite;
+  animation: textthree 10s infinite;
+}
+
+.text-4 {
+  left: 60%;
+  -webkit-animation: itemfour 10s infinite;
+  animation: textfour 10s infinite;
+}
+
+.text-5 {
+  left: 80%;
+  -webkit-animation: itemfive 10s infinite;
+  animation: textfive 10s infinite;
+}
+.text-6 {
+  left: 100%;
+  -webkit-animation: itemsix 10s infinite;
+  animation: textsix 10s infinite;
+}
+
+@keyframes itemone {
+	0% {
+		background:#e6e6e6;
+	}
+
+	25% {
+		background:#3f96f3;
+	} 
+
+	50% {
+		background:#3f96f3;
+	}
+	75% {
+		background:#3f96f3;
+	}
+
+	100% {
+		background:#3f96f3;
+	}
+
+}
+
+@-webkit-keyframes itemone {
+	0% {
+		background:#e6e6e6;
+	}
+
+	25% {
+		background:#3f96f3;
+	} 
+
+	50% {
+		background:#3f96f3;
+	}
+	75% {
+		background:#3f96f3;
+	}
+
+	100% {
+		background:#3f96f3;
+	}
+
+}
+@keyframes itemtwo {
+	0% {
+		background:#e6e6e6;
+	}
+
+	25% {
+		background:red;
+	} 
+
+	50% {
+		background:#3f96f3;
+	}
+	75% {
+		background:#3f96f3;
+	}
+
+	100% {
+		background:#3f96f3;
+	}
+
+}
+@-webkit-keyframes itemtwo {
+	0% {
+		background:#e6e6e6;
+	}
+
+	25% {
+		background:red;
+	} 
+
+	50% {
+		background:#3f96f3;
+	}
+	75% {
+		background:#3f96f3;
+	}
+
+	100% {
+		background:#3f96f3;
+	}
+
+}
+
+@keyframes itemthree {
+	0% {
+		background:#e6e6e6;
+	}
+
+	25% {
+		background:#e6e6e6;
+	} 
+
+	50% {
+		background:red;
+	}
+	75% {
+		background:#3f96f3;
+	}
+
+	100% {
+		background:#3f96f3;
+	}
+
+}
+@-webkit-keyframes itemthree {
+	0% {
+		background:#e6e6e6;
+	}
+
+	25% {
+		background:#e6e6e6;
+	} 
+
+	50% {
+		background:red;
+	}
+	75% {
+		background:#3f96f3;
+	}
+
+	100% {
+		background:#3f96f3;
+	}
+
+}
+
+@keyframes itemfour {
+	0% {
+		background:#e6e6e6;
+	}
+
+	25% {
+		background:#e6e6e6;
+	} 
+
+	50% {
+		background:#e6e6e6;
+	}
+	75% {
+		background:red;
+	}
+
+	100% {
+		background:#3f96f3;
+	}
+
+}
+@-webkit-keyframes itemfour {
+	0% {
+		background:#e6e6e6;
+	}
+
+	25% {
+		background:#e6e6e6;
+	} 
+
+	50% {
+		background:#e6e6e6
+	}
+	75% {
+		background:red;
+	}
+
+	100% {
+		background:#3f96f3;
+	}
+
+}
+
+
+@keyframes itemfive {
+	0% {
+		background:#e6e6e6;
+	}
+
+	25% {
+		background:#e6e6e6;
+	} 
+
+	50% {
+		background:#e6e6e6;
+	}
+	75% {
+		background:#e6e6e6;
+	}
+
+	90% {
+		background:red;
+	}
+	95% {
+		background:#3f96f3;
+	}
+	100% {
+		background:#3f96f3;
+	}
+
+}
+@-webkit-keyframes itemfive {
+	0% {
+		background:#e6e6e6;
+	}
+
+	25% {
+		background:#e6e6e6;
+	} 
+
+	50% {
+		background:#e6e6e6;
+	}
+	75% {
+		background:#e6e6e6
+	}
+
+	90% {
+		background:red;
+	}
+	95% {
+		background:#3f96f3;
+	}
+	100% {
+		background:#3f96f3;
+	}
+
+}
+
+@keyframes itemsix{
+	0% {
+		background:#e6e6e6;
+	}
+
+	25% {
+		background:#e6e6e6;
+	} 
+
+	50% {
+		background:#e6e6e6;
+	}
+	75% {
+		background:#e6e6e6;
+	}
+
+	90% {
+		background:red;
+	}
+	95% {
+		background:#3f96f3;
+	}
+	100% {
+		background:#3f96f3;
+	}
+
+}
+@-webkit-keyframes itemsix {
+	0% {
+		background:#e6e6e6;
+	}
+
+	25% {
+		background:#e6e6e6;
+	} 
+
+	50% {
+		background:#e6e6e6;
+	}
+	75% {
+		background:#e6e6e6
+	}
+
+	90% {
+		background:red;
+	}
+	95% {
+		background:#3f96f3;
+	}
+	100% {
+		background:#3f96f3;
+	}
+}
+
+@keyframes textone {
+	0% {
+		color:#e6e6e6;
+	}
+
+	25% {
+		color:#3f96f3;
+	} 
+
+	50% {
+		color:#3f96f3;
+	}
+	75% {
+		color:#3f96f3;
+	}
+
+	100% {
+		color:#3f96f3;
+	}
+
+}
+
+@-webkit-keyframes textone {
+	0% {
+		color:#e6e6e6;
+	}
+
+	25% {
+		color:#3f96f3;
+	} 
+
+	50% {
+		color:#3f96f3;
+	}
+	75% {
+		color:#3f96f3;
+	}
+
+	100% {
+		color:#3f96f3;
+	}
+
+}
+@keyframes texttwo {
+	0% {
+		color:#e6e6e6;
+	}
+
+	25% {
+		color:red;
+	} 
+
+	50% {
+		color:#3f96f3;
+	}
+	75% {
+		color:#3f96f3;
+	}
+
+	100% {
+		color:#3f96f3;
+	}
+
+}
+@-webkit-keyframes texttwo {
+	0% {
+		color:#e6e6e6;
+	}
+
+	25% {
+		color:red;
+	} 
+
+	50% {
+		color:#3f96f3;
+	}
+	75% {
+		color:#3f96f3;
+	}
+
+	100% {
+		color:#3f96f3;
+	}
+
+}
+
+@keyframes textthree {
+	0% {
+		color:#e6e6e6;
+	}
+
+	25% {
+		color:#e6e6e6;
+	} 
+
+	50% {
+		color:red;
+	}
+	75% {
+		color:#3f96f3;
+	}
+
+	100% {
+		color:#3f96f3;
+	}
+
+}
+@-webkit-keyframes textthree {
+	0% {
+		color:#e6e6e6;
+	}
+
+	25% {
+		color:#e6e6e6;
+	} 
+
+	50% {
+		color:red;
+	}
+	75% {
+		color:#3f96f3;
+	}
+
+	100% {
+		color:#3f96f3;
+	}
+
+}
+
+@keyframes textfour {
+	0% {
+		color:#e6e6e6;
+	}
+
+	25% {
+		color:#e6e6e6;
+	} 
+
+	50% {
+		color:#e6e6e6;
+	}
+	75% {
+		color:red;
+	}
+
+	100% {
+		color:#3f96f3;
+	}
+
+}
+@-webkit-keyframes textfour {
+	0% {
+		color:#e6e6e6;
+	}
+
+	25% {
+		color:#e6e6e6;
+	} 
+
+	50% {
+		color:#e6e6e6
+	}
+	75% {
+		color:red;
+	}
+
+	100% {
+		color:#3f96f3;
+	}
+
+}
+
+
+@keyframes textfive {
+	0% {
+		color:#e6e6e6;
+	}
+
+	25% {
+		color:#e6e6e6;
+	} 
+
+	50% {
+		color:#e6e6e6;
+	}
+	75% {
+		color:#e6e6e6;
+	}
+
+	90% {
+		color:red;
+	}
+	95% {
+		color:#3f96f3;
+	}
+	100% {
+		color:#3f96f3;
+	}
+
+}
+@-webkit-keyframes textfive {
+	0% {
+		color:#e6e6e6;
+	}
+
+	25% {
+		color:#e6e6e6;
+	} 
+
+	50% {
+		color:#e6e6e6;
+	}
+	75% {
+		color:#e6e6e6
+	}
+
+	90% {
+		color:red;
+	}
+	95% {
+		color:#3f96f3;
+	}
+	100% {
+		color:#3f96f3;
+	}
+
+}
+
+@keyframes textsix{
+	0% {
+		color:#e6e6e6;
+	}
+
+	25% {
+		color:#e6e6e6;
+	} 
+
+	50% {
+		color:#e6e6e6;
+	}
+	75% {
+		color:#e6e6e6;
+	}
+
+	90% {
+		color:red;
+	}
+	95% {
+		color:#3f96f3;
+	}
+	100% {
+		color:#3f96f3;
+	}
+
+}
+@-webkit-keyframes textsix {
+	0% {
+		color:#e6e6e6;
+	}
+
+	25% {
+		color:#e6e6e6;
+	} 
+
+	50% {
+		color:#e6e6e6;
+	}
+	75% {
+		color:#e6e6e6
+	}
+
+	90% {
+		color:red;
+	}
+	95% {
+		color:#3f96f3;
+	}
+	100% {
+		color:#3f96f3;
+	}
+
 }
